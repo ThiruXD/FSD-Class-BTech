@@ -1,12 +1,11 @@
 {
   "name": "Task App",
   "short_name": "Tasks",
-  "description": "Simple React Task App",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "theme_color": "#1976d2",
+  "description": "A simple task management app.",
   "icons": [
     {
       "src": "/icon-192.png",
