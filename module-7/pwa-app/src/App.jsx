@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Header from './components/Header'
 import NewsCard from './components/NewsCard'
 import CountryFilter from './components/CountryFilter'
+import InstallPrompt from './components/InstallPrompt'
 import PWABadge from './PWABadge'
 import './App.css'
 
@@ -67,6 +68,7 @@ function App() {
       </main>
 
       <PWABadge />
+      <InstallPrompt />
     </div>
   )
 }

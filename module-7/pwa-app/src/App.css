@@ -28,6 +28,7 @@
   font-size: 1.5rem;
   background: linear-gradient(135deg, var(--primary), var(--accent));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -180,6 +181,7 @@
   font-weight: 600;
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -191,6 +193,7 @@
   line-height: 1.6;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   flex: 1;
@@ -253,6 +256,113 @@
 
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* Install Prompt Styles */
+.install-prompt-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
+  animation: slideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.install-prompt-card {
+  background: var(--card-dark);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 1.5rem;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.install-prompt-header {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.install-prompt-icon {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  color: white;
+}
+
+.install-prompt-text h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.install-prompt-text p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.install-prompt-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.install-btn {
+  flex: 1;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.install-btn.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.install-btn.primary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+.install-btn.secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--glass-border);
+}
+
+.install-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
