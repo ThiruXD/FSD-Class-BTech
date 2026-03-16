@@ -11,7 +11,7 @@ function App() {
   const [country, setCountry] = useState('in,us')
   const [error, setError] = useState(null)
 
-  const API_KEY = '2feb83a02d03e45379ee0f3dfd3fb2a3'
+  const API_KEY = import.meta.env.VITE_MEDIASTACK_API_KEY
 
   useEffect(() => {
     const fetchNews = async () => {
